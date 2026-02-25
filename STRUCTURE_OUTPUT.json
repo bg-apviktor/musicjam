@@ -1,0 +1,139 @@
+{
+  "version": "1.0",
+  "project": {
+    "id": "musicjam",
+    "name": "MusicJam"
+  },
+  "navigation": {
+    "header": ["home", "about", "history", "merch", "donate", "social"],
+    "footer": ["social"]
+  },
+  "pages": [
+    {
+      "id": "home",
+      "route": "/",
+      "locales": ["en", "ru", "et"],
+      "purpose": "Hero landing — introduce MusicJam, its Christian mission, key activities, and guide visitors to merch, donate, and social links",
+      "sections": [
+        {
+          "id": "hero",
+          "componentType": "hero_centered",
+          "priority": "high",
+          "notes": "Full-width centred hero with MusicJam logo, tagline 'Play. Worship. Grow.' in Caveat font, warm cream background (#FDF8F4), and primary CTA button ('Support the camp' / 'Поддержать лагерь'). Optional background photo of camp participants with overlay."
+        },
+        {
+          "id": "intro_tagline",
+          "componentType": "text_block",
+          "priority": "medium",
+          "notes": "Short 2–3 sentence mission statement beneath the hero. Warm, welcoming tone — sets context for teenagers and parents. Language-switched copy in EN/RU/ET."
+        },
+        {
+          "id": "quick_stats",
+          "componentType": "stats_strip",
+          "priority": "medium",
+          "notes": "3-stat strip: 'Since 2018', '5+ cities', '3 languages'. Raspberry accent numbers, muted label text. Thin divider line above and below."
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "route": "/#about",
+      "locales": ["en", "ru", "et"],
+      "purpose": "What is MusicJam — music activities (vocal, instrumental, orchestra, choir, worship band), spiritual focus, small group atmosphere",
+      "sections": [
+        {
+          "id": "about_intro",
+          "componentType": "story_block",
+          "priority": "high",
+          "notes": "Section heading ('About MusicJam') + 1–2 paragraphs describing the faith-centred music camp experience. Nunito body text, h2 heading. surfaceAlt background (#F9ECEF) for visual separation."
+        },
+        {
+          "id": "activities_grid",
+          "componentType": "about_feature_grid",
+          "priority": "high",
+          "notes": "2×3 icon grid of camp activities: Vocal, Instrumental, Orchestra, Choir, Worship Band, Small Groups. Each card: icon + short title + one-liner. Cards on surfaceAlt (#F9ECEF) with radius-md corners and subtle shadow."
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "route": "/#history",
+      "locales": ["en", "ru", "et"],
+      "purpose": "Timeline of annual camps by city (Tapa 2018–2019, Tapa 2020, Narva 2021, Kohila 2022, Haapsalu 2023)",
+      "sections": [
+        {
+          "id": "history_heading",
+          "componentType": "text_block",
+          "priority": "medium",
+          "notes": "Section heading + short intro sentence about MusicJam's journey across Estonia since 2018. Centred, h2 in Nunito."
+        },
+        {
+          "id": "camp_timeline",
+          "componentType": "history_timeline",
+          "priority": "high",
+          "notes": "Vertical alternating timeline. Nodes: Tapa 2018, Tapa 2019, Tapa 2020, Narva 2021, Kohila 2022, Haapsalu 2023. Each node: year badge (raspberry), city name (h3), optional photo thumbnail. Timeline line in #B5174A with berry-dot markers."
+        }
+      ]
+    },
+    {
+      "id": "merch",
+      "route": "/#merch",
+      "locales": ["en", "ru", "et"],
+      "purpose": "Showcase available merchandise",
+      "sections": [
+        {
+          "id": "merch_heading",
+          "componentType": "text_block",
+          "priority": "medium",
+          "notes": "Section heading ('Merch') + 1 short line encouraging supporters to grab camp gear. Centred."
+        },
+        {
+          "id": "merch_products",
+          "componentType": "merch_carousel",
+          "priority": "high",
+          "notes": "Horizontal scrollable row of product cards. Each card: product photo, name, price. White surface (#FFFFFF) with radius-md and subtle shadow. Scroll arrows visible on desktop; swipeable on mobile."
+        }
+      ]
+    },
+    {
+      "id": "donate",
+      "route": "/#donate",
+      "locales": ["en", "ru", "et"],
+      "purpose": "Donation section with PayPal link and funding context",
+      "sections": [
+        {
+          "id": "donate_panel",
+          "componentType": "donate_cta_panel",
+          "priority": "high",
+          "notes": "Centred card on surfaceAlt (#F9ECEF) with radius-lg. Contains: heartfelt 1-paragraph message about why donations matter, funding context (scholarships, equipment, venues), and PayPal donate button in accent green (#3EA66B). 'Support the camp' CTA is the primary business goal — make it prominent."
+        },
+        {
+          "id": "donate_trust",
+          "componentType": "text_block",
+          "priority": "low",
+          "notes": "Small print below donate button: non-profit context, how funds are used. caption style text, muted colour (#7A5C68)."
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "route": "/#social",
+      "locales": ["en", "ru", "et"],
+      "purpose": "Links to Instagram, YouTube, Facebook",
+      "sections": [
+        {
+          "id": "social_links",
+          "componentType": "social_icon_row",
+          "priority": "high",
+          "notes": "Centred row of 3 social icons: Instagram (@musicjam_), YouTube (musicjamcamp), Facebook (musicjamcamp). Icon size ~40px, hover animation (scale + colour tint). Accent green hover state. Sits just above the footer."
+        },
+        {
+          "id": "footer_strip",
+          "componentType": "text_block",
+          "priority": "low",
+          "notes": "Minimal footer: © MusicJam 2018–2026, language switcher pill (ET | RU | EN) via language_switcher component. Background matches surface (#FFFFFF) or primary raspberry for brand close."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "version": "1.1",
+  "project": { "id": "musicjam", "name": "MusicJam" },
+  "generatedAt": "2026-02-24T23:30:00+02:00",
+  "assets": [
+    {
+      "id": "hero_background",
+      "section": "hero",
+      "purpose": "Hero section main visual",
+      "type": "photo",
+      "dimensions": "1920x1080",
+      "filename": "2026-02-24-23-30-01-hero-background.png",
+      "prompt": "A warm summer evening at a Christian music camp, with teenagers gathered around playing guitars on a lush green lawn. The scene is illuminated by berry-coloured light, evoking a sense of sunlit worship and acoustic intimacy. The image should be candid and natural, capturing the essence of youth and joy in a landscape of leafy greens and a warm cream sky.",
+      "negativeHints": "Posed shots, stock-photo clichés",
+      "priority": "high"
+    },
+    {
+      "id": "about_illustration",
+      "section": "about",
+      "purpose": "About section visual",
+      "type": "illustration",
+      "dimensions": "1200x800",
+      "filename": "2026-02-24-23-30-02-about-illustration.png",
+      "prompt": "An illustration of a diverse group of teenagers joyfully engaged in music activities at a Christian camp. The scene is dominated by warm cream tones accented with deep raspberry and leafy green, reflecting a youthful, handmade yet polished style. The composition should feel vibrant and inclusive, conveying harmony and growth.",
+      "negativeHints": "Dull colors, formal poses",
+      "priority": "high"
+    },
+    {
+      "id": "icon_vocal",
+      "section": "icons",
+      "purpose": "Vocal icon",
+      "type": "icon",
+      "dimensions": "512x512",
+      "filename": "2026-02-24-23-30-03-icon-vocal.png",
+      "prompt": "A flat illustration of a microphone with sound waves in deep raspberry on a white background. The design should be simple yet bold, with consistent stroke weight to match other icons.",
+      "negativeHints": "Complex details, multicolor",
+      "priority": "high"
+    },
+    {
+      "id": "icon_instrumental",
+      "section": "icons",
+      "purpose": "Instrumental icon",
+      "type": "icon",
+      "dimensions": "512x512",
+      "filename": "2026-02-24-23-30-04-icon-instrumental.png",
+      "prompt": "A flat illustration of an acoustic guitar in leafy green on a white background. The style should be clean and minimalistic, ensuring visual coherence with other icons.",
+      "negativeHints": "Intricate designs, multicolor",
+      "priority": "high"
+    },
+    {
+      "id": "icon_orchestra",
+      "section": "icons",
+      "purpose": "Orchestra icon",
+      "type": "icon",
+      "dimensions": "512x512",
+      "filename": "2026-02-24-23-30-05-icon-orchestra.png",
+      "prompt": "A flat illustration of a conductor's baton with musical notes in a deep raspberry on a white background. The image should be simple, with clean lines to maintain consistency with other icons.",
+      "negativeHints": "Overly detailed, multicolor",
+      "priority": "medium"
+    },
+    {
+      "id": "icon_choir",
+      "section": "icons",
+      "purpose": "Choir icon",
+      "type": "icon",
+      "dimensions": "512x512",
+      "filename": "2026-02-24-23-30-06-icon-choir.png",
+      "prompt": "A flat illustration of a music note in harmony with another note, in leafy green on a white background. Designed to complement the visual style of other icons with a focus on unity and balance.",
+      "negativeHints": "Complex graphics, multicolor",
+      "priority": "medium"
+    },
+    {
+      "id": "icon_worship_band",
+      "section": "icons",
+      "purpose": "Worship band icon",
+      "type": "icon",
+      "dimensions": "512x512",
+      "filename": "2026-02-24-23-30-07-icon-worship-band.png",
+      "prompt": "A flat illustration of a cross intertwined with a guitar, in deep raspberry on a white background. The design must be sleek and understated, maintaining coherence with the rest of the icon set.",
+      "negativeHints": "Elaborate details, multicolor",
+      "priority": "high"
+    },
+    {
+      "id": "icon_small_groups",
+      "section": "icons",
+      "purpose": "Small groups icon",
+      "type": "icon",
+      "dimensions": "512x512",
+      "filename": "2026-02-24-23-30-08-icon-small-groups.png",
+      "prompt": "A flat illustration of three overlapping circles, symbolizing community, in leafy green on a white background. Simple strokes and shapes should echo the unified visual language of the other icons.",
+      "negativeHints": "Complex imagery, multicolor",
+      "priority": "medium"
+    },
+    {
+      "id": "donate_illustration",
+      "section": "donate",
+      "purpose": "Donate section visual",
+      "type": "illustration",
+      "dimensions": "1200x800",
+      "filename": "2026-02-24-23-30-09-donate-illustration.png",
+      "prompt": "An illustration capturing the spirit of giving, with hands extended holding a heart symbol in deep raspberry. The background should be warm cream, creating an inviting and uplifting atmosphere. The style should be whimsical yet sincere, evoking a sense of community and support.",
+      "negativeHints": "Overly formal, cold colors",
+      "priority": "high"
+    },
+    {
+      "id": "og_image",
+      "section": "open_graph",
+      "purpose": "Social media sharing image",
+      "type": "og_card",
+      "dimensions": "1200x630",
+      "filename": "2026-02-24-23-30-10-og-image.png",
+      "prompt": "A vibrant and engaging image promoting MusicJam with the words 'MusicJam' and 'Play. Worship. Grow.' prominently displayed. The composition should include elements of guitars, music notes, and a sunlit outdoor scene. Colors should incorporate deep raspberry and leafy green, ensuring the image is impactful and aligns with the camp's warm and youthful branding.",
+      "negativeHints": "Cluttered visuals, no text",
+      "priority": "high"
+    }
+  ]
+}

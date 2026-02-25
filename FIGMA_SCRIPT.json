@@ -1,0 +1,346 @@
+{
+  "version": "1.0",
+  "project": {
+    "id": "musicjam",
+    "name": "MusicJam",
+    "locale": "en",
+    "locales": ["en", "ru", "et"]
+  },
+  "tokens": {
+    "colors": {
+      "primary": "#B5174A",
+      "onPrimary": "#FFFFFF",
+      "accent": "#3EA66B",
+      "accentSoft": "#D6F0E2",
+      "background": "#FDF8F4",
+      "surface": "#FFFFFF",
+      "surfaceAlt": "#F9ECEF",
+      "borderSubtle": "#E8D5DA",
+      "text": "#2D1A22",
+      "textMuted": "#7A5C68"
+    },
+    "typography": {
+      "primaryFont": "Nunito",
+      "secondaryFont": "Caveat",
+      "fallbacks": ["system-ui", "sans-serif"],
+      "scale": {
+        "h1": { "size": 52, "lineHeight": 1.1, "weight": 800, "tracking": -0.02, "font": "Caveat" },
+        "h2": { "size": 36, "lineHeight": 1.15, "weight": 700, "tracking": -0.01, "font": "Nunito" },
+        "h3": { "size": 24, "lineHeight": 1.25, "weight": 700, "tracking": 0, "font": "Nunito" },
+        "body": { "size": 17, "lineHeight": 1.6, "weight": 400, "tracking": 0, "font": "Nunito" },
+        "caption": { "size": 13, "lineHeight": 1.4, "weight": 600, "tracking": 0.02, "font": "Nunito" }
+      }
+    },
+    "radius": {
+      "sm": 10,
+      "md": 18,
+      "lg": 28
+    },
+    "spacing": {
+      "sectionVertical": 88,
+      "blockGap": 36
+    }
+  },
+  "pages": [
+    {
+      "id": "home",
+      "name": "Home",
+      "route": "/",
+      "layout": { "grid": "12-column", "width": 1120, "margin": 80 },
+      "sections": [
+        {
+          "id": "hero",
+          "componentType": "hero_centered",
+          "priority": "high",
+          "actions": [
+            { "type": "create_frame", "frameId": "hero", "preset": "section-full-width", "height": 720 },
+            { "type": "apply_layout", "target": "hero", "layout": "centered" },
+            { "type": "add_text", "target": "hero", "slot": "heading", "style": "h1", "contentRef": "copy.home.hero.title_en" },
+            { "type": "add_text", "target": "hero", "slot": "subheading", "style": "body", "contentRef": "copy.home.hero.subtitle_en" },
+            { "type": "add_button", "target": "hero", "slot": "primary_cta", "variant": "primary", "labelRef": "copy.home.hero.cta_en" }
+          ]
+        },
+        {
+          "id": "intro_tagline",
+          "componentType": "text_block",
+          "priority": "medium",
+          "actions": [
+            { "type": "create_frame", "frameId": "intro_tagline", "preset": "section-full-width", "height": 240 },
+            { "type": "apply_layout", "target": "intro_tagline", "layout": "centered" },
+            { "type": "add_text", "target": "intro_tagline", "slot": "heading", "style": "h2", "contentRef": "copy.home.intro_tagline.title_en" },
+            { "type": "add_text", "target": "intro_tagline", "slot": "body", "style": "body", "contentRef": "copy.home.intro_tagline.subtitle_en" },
+            { "type": "add_button", "target": "intro_tagline", "slot": "secondary_cta", "variant": "secondary", "labelRef": "copy.home.intro_tagline.cta_en" }
+          ]
+        },
+        {
+          "id": "quick_stats",
+          "componentType": "stats_strip",
+          "priority": "medium",
+          "actions": [
+            { "type": "create_frame", "frameId": "quick_stats", "preset": "section-full-width", "height": 160 },
+            { "type": "apply_layout", "target": "quick_stats", "layout": "horizontal-centered" },
+            { "type": "add_text", "target": "quick_stats", "slot": "heading", "style": "h3", "contentRef": "copy.home.quick_stats.title_en" },
+            {
+              "type": "add_items",
+              "target": "quick_stats",
+              "itemsRef": "copy.home.quick_stats.items_en",
+              "itemTemplate": {
+                "valueStyle": "h2",
+                "valueColor": "#B5174A",
+                "labelStyle": "caption",
+                "labelColor": "#7A5C68"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "name": "About",
+      "route": "/#about",
+      "layout": { "grid": "12-column", "width": 1120, "margin": 80 },
+      "sections": [
+        {
+          "id": "about_intro",
+          "componentType": "story_block",
+          "priority": "high",
+          "actions": [
+            { "type": "create_frame", "frameId": "about_intro", "preset": "section-full-width", "height": 400 },
+            { "type": "apply_layout", "target": "about_intro", "layout": "centered", "background": "#F9ECEF" },
+            { "type": "add_text", "target": "about_intro", "slot": "heading", "style": "h2", "contentRef": "copy.about.about_intro.title_en" },
+            { "type": "add_text", "target": "about_intro", "slot": "subheading", "style": "body", "contentRef": "copy.about.about_intro.subtitle_en" },
+            { "type": "add_text", "target": "about_intro", "slot": "body", "style": "body", "contentRef": "copy.about.about_intro.body_en" },
+            { "type": "add_button", "target": "about_intro", "slot": "primary_cta", "variant": "primary", "labelRef": "copy.about.about_intro.cta_en" }
+          ]
+        },
+        {
+          "id": "activities_grid",
+          "componentType": "about_feature_grid",
+          "priority": "high",
+          "actions": [
+            { "type": "create_frame", "frameId": "activities_grid", "preset": "section-full-width", "height": 560 },
+            { "type": "apply_layout", "target": "activities_grid", "layout": "grid-2x3", "background": "#F9ECEF" },
+            { "type": "add_text", "target": "activities_grid", "slot": "heading", "style": "h2", "contentRef": "copy.about.activities_grid.title_en" },
+            { "type": "add_text", "target": "activities_grid", "slot": "subheading", "style": "body", "contentRef": "copy.about.activities_grid.subtitle_en" },
+            {
+              "type": "add_items",
+              "target": "activities_grid",
+              "itemsRef": "copy.about.activities_grid.items_en",
+              "itemTemplate": {
+                "cardBackground": "#F9ECEF",
+                "radius": 18,
+                "shadow": "subtle",
+                "titleStyle": "h3",
+                "bodyStyle": "body"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "route": "/#history",
+      "layout": { "grid": "12-column", "width": 1120, "margin": 80 },
+      "sections": [
+        {
+          "id": "history_heading",
+          "componentType": "text_block",
+          "priority": "medium",
+          "actions": [
+            { "type": "create_frame", "frameId": "history_heading", "preset": "section-full-width", "height": 200 },
+            { "type": "apply_layout", "target": "history_heading", "layout": "centered" },
+            { "type": "add_text", "target": "history_heading", "slot": "heading", "style": "h2", "contentRef": "copy.history.history_heading.title_en" },
+            { "type": "add_text", "target": "history_heading", "slot": "subheading", "style": "body", "contentRef": "copy.history.history_heading.subtitle_en" }
+          ]
+        },
+        {
+          "id": "camp_timeline",
+          "componentType": "history_timeline",
+          "priority": "high",
+          "actions": [
+            { "type": "create_frame", "frameId": "camp_timeline", "preset": "section-full-width", "height": 960 },
+            { "type": "apply_layout", "target": "camp_timeline", "layout": "vertical-alternating" },
+            { "type": "add_text", "target": "camp_timeline", "slot": "heading", "style": "h2", "contentRef": "copy.history.camp_timeline.title_en" },
+            {
+              "type": "add_items",
+              "target": "camp_timeline",
+              "itemsRef": "copy.history.camp_timeline.items_en",
+              "itemTemplate": {
+                "markerColor": "#B5174A",
+                "markerStyle": "berry-dot",
+                "lineColor": "#B5174A",
+                "yearStyle": "h3",
+                "bodyStyle": "body",
+                "alternating": true,
+                "showPhotoThumbnail": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "merch",
+      "name": "Merch",
+      "route": "/#merch",
+      "layout": { "grid": "12-column", "width": 1120, "margin": 80 },
+      "sections": [
+        {
+          "id": "merch_heading",
+          "componentType": "text_block",
+          "priority": "medium",
+          "actions": [
+            { "type": "create_frame", "frameId": "merch_heading", "preset": "section-full-width", "height": 180 },
+            { "type": "apply_layout", "target": "merch_heading", "layout": "centered" },
+            { "type": "add_text", "target": "merch_heading", "slot": "heading", "style": "h2", "contentRef": "copy.merch.merch_heading.title_en" },
+            { "type": "add_text", "target": "merch_heading", "slot": "subheading", "style": "body", "contentRef": "copy.merch.merch_heading.subtitle_en" },
+            { "type": "add_button", "target": "merch_heading", "slot": "primary_cta", "variant": "primary", "labelRef": "copy.merch.merch_heading.cta_en" }
+          ]
+        },
+        {
+          "id": "merch_products",
+          "componentType": "merch_carousel",
+          "priority": "high",
+          "actions": [
+            { "type": "create_frame", "frameId": "merch_products", "preset": "section-full-width", "height": 420 },
+            { "type": "apply_layout", "target": "merch_products", "layout": "horizontal-scroll" },
+            { "type": "add_text", "target": "merch_products", "slot": "heading", "style": "h2", "contentRef": "copy.merch.merch_products.title_en" },
+            {
+              "type": "add_items",
+              "target": "merch_products",
+              "itemsRef": "copy.merch.merch_products.items_en",
+              "itemTemplate": {
+                "cardBackground": "#FFFFFF",
+                "radius": 18,
+                "shadow": "subtle",
+                "showPhoto": true,
+                "nameStyle": "h3",
+                "priceStyle": "body",
+                "scrollArrows": true,
+                "swipeable": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "donate",
+      "name": "Donate",
+      "route": "/#donate",
+      "layout": { "grid": "12-column", "width": 1120, "margin": 80 },
+      "sections": [
+        {
+          "id": "donate_panel",
+          "componentType": "donate_cta_panel",
+          "priority": "high",
+          "actions": [
+            { "type": "create_frame", "frameId": "donate_panel", "preset": "section-full-width", "height": 480 },
+            { "type": "apply_layout", "target": "donate_panel", "layout": "centered", "background": "#F9ECEF", "radius": 28 },
+            { "type": "add_text", "target": "donate_panel", "slot": "heading", "style": "h2", "contentRef": "copy.donate.donate_panel.title_en" },
+            { "type": "add_text", "target": "donate_panel", "slot": "subheading", "style": "body", "contentRef": "copy.donate.donate_panel.subtitle_en" },
+            { "type": "add_text", "target": "donate_panel", "slot": "body", "style": "body", "contentRef": "copy.donate.donate_panel.body_en" },
+            { "type": "add_button", "target": "donate_panel", "slot": "primary_cta", "variant": "accent", "color": "#3EA66B", "labelRef": "copy.donate.donate_panel.cta_en" }
+          ]
+        },
+        {
+          "id": "donate_trust",
+          "componentType": "text_block",
+          "priority": "low",
+          "actions": [
+            { "type": "create_frame", "frameId": "donate_trust", "preset": "section-full-width", "height": 120 },
+            { "type": "apply_layout", "target": "donate_trust", "layout": "centered" },
+            { "type": "add_text", "target": "donate_trust", "slot": "heading", "style": "caption", "contentRef": "copy.donate.donate_trust.title_en" },
+            { "type": "add_text", "target": "donate_trust", "slot": "body", "style": "caption", "color": "#7A5C68", "contentRef": "copy.donate.donate_trust.body_en" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "name": "Social",
+      "route": "/#social",
+      "layout": { "grid": "12-column", "width": 1120, "margin": 80 },
+      "sections": [
+        {
+          "id": "social_links",
+          "componentType": "social_icon_row",
+          "priority": "high",
+          "actions": [
+            { "type": "create_frame", "frameId": "social_links", "preset": "section-full-width", "height": 200 },
+            { "type": "apply_layout", "target": "social_links", "layout": "centered" },
+            { "type": "add_text", "target": "social_links", "slot": "heading", "style": "h2", "contentRef": "copy.social.social_links.title_en" },
+            { "type": "add_text", "target": "social_links", "slot": "subheading", "style": "body", "contentRef": "copy.social.social_links.subtitle_en" },
+            {
+              "type": "add_items",
+              "target": "social_links",
+              "itemsRef": "social.icons",
+              "items": [
+                { "platform": "instagram", "handle": "@musicjam_", "url": "https://instagram.com/musicjam_", "iconSize": 40, "hoverColor": "#3EA66B" },
+                { "platform": "youtube", "handle": "musicjamcamp", "url": "https://youtube.com/musicjamcamp", "iconSize": 40, "hoverColor": "#3EA66B" },
+                { "platform": "facebook", "handle": "musicjamcamp", "url": "https://facebook.com/musicjamcamp", "iconSize": 40, "hoverColor": "#3EA66B" }
+              ],
+              "itemTemplate": {
+                "layout": "horizontal-row",
+                "hoverAnimation": "scale+tint"
+              }
+            }
+          ]
+        },
+        {
+          "id": "footer_strip",
+          "componentType": "text_block",
+          "priority": "low",
+          "actions": [
+            { "type": "create_frame", "frameId": "footer_strip", "preset": "section-full-width", "height": 80 },
+            { "type": "apply_layout", "target": "footer_strip", "layout": "horizontal-space-between", "background": "#FFFFFF" },
+            { "type": "add_text", "target": "footer_strip", "slot": "heading", "style": "caption", "contentRef": "copy.social.footer_strip.title_en" },
+            { "type": "add_component", "target": "footer_strip", "slot": "language_switcher", "component": "language_switcher", "options": { "locales": ["et", "ru", "en"], "style": "pill" } }
+          ]
+        }
+      ]
+    }
+  ],
+  "copyMap": {
+    "copy.home.hero.title_en":             { "source": "COPY_OUTPUT.json", "path": ["pages","home","hero","en","title"] },
+    "copy.home.hero.subtitle_en":          { "source": "COPY_OUTPUT.json", "path": ["pages","home","hero","en","subtitle"] },
+    "copy.home.hero.cta_en":              { "source": "COPY_OUTPUT.json", "path": ["pages","home","hero","en","cta"] },
+    "copy.home.intro_tagline.title_en":    { "source": "COPY_OUTPUT.json", "path": ["pages","home","intro_tagline","en","title"] },
+    "copy.home.intro_tagline.subtitle_en": { "source": "COPY_OUTPUT.json", "path": ["pages","home","intro_tagline","en","subtitle"] },
+    "copy.home.intro_tagline.cta_en":      { "source": "COPY_OUTPUT.json", "path": ["pages","home","intro_tagline","en","cta"] },
+    "copy.home.quick_stats.title_en":      { "source": "COPY_OUTPUT.json", "path": ["pages","home","quick_stats","en","title"] },
+    "copy.home.quick_stats.items_en":      { "source": "COPY_OUTPUT.json", "path": ["pages","home","quick_stats","en","items"] },
+    "copy.about.about_intro.title_en":     { "source": "COPY_OUTPUT.json", "path": ["pages","about","about_intro","en","title"] },
+    "copy.about.about_intro.subtitle_en":  { "source": "COPY_OUTPUT.json", "path": ["pages","about","about_intro","en","subtitle"] },
+    "copy.about.about_intro.body_en":      { "source": "COPY_OUTPUT.json", "path": ["pages","about","about_intro","en","body"] },
+    "copy.about.about_intro.cta_en":       { "source": "COPY_OUTPUT.json", "path": ["pages","about","about_intro","en","cta"] },
+    "copy.about.activities_grid.title_en":    { "source": "COPY_OUTPUT.json", "path": ["pages","about","activities_grid","en","title"] },
+    "copy.about.activities_grid.subtitle_en": { "source": "COPY_OUTPUT.json", "path": ["pages","about","activities_grid","en","subtitle"] },
+    "copy.about.activities_grid.items_en":    { "source": "COPY_OUTPUT.json", "path": ["pages","about","activities_grid","en","items"] },
+    "copy.history.history_heading.title_en":    { "source": "COPY_OUTPUT.json", "path": ["pages","history","history_heading","en","title"] },
+    "copy.history.history_heading.subtitle_en": { "source": "COPY_OUTPUT.json", "path": ["pages","history","history_heading","en","subtitle"] },
+    "copy.history.camp_timeline.title_en":   { "source": "COPY_OUTPUT.json", "path": ["pages","history","camp_timeline","en","title"] },
+    "copy.history.camp_timeline.items_en":   { "source": "COPY_OUTPUT.json", "path": ["pages","history","camp_timeline","en","items"] },
+    "copy.merch.merch_heading.title_en":    { "source": "COPY_OUTPUT.json", "path": ["pages","merch","merch_heading","en","title"] },
+    "copy.merch.merch_heading.subtitle_en": { "source": "COPY_OUTPUT.json", "path": ["pages","merch","merch_heading","en","subtitle"] },
+    "copy.merch.merch_heading.cta_en":      { "source": "COPY_OUTPUT.json", "path": ["pages","merch","merch_heading","en","cta"] },
+    "copy.merch.merch_products.title_en":   { "source": "COPY_OUTPUT.json", "path": ["pages","merch","merch_products","en","title"] },
+    "copy.merch.merch_products.items_en":   { "source": "COPY_OUTPUT.json", "path": ["pages","merch","merch_products","en","items"] },
+    "copy.donate.donate_panel.title_en":    { "source": "COPY_OUTPUT.json", "path": ["pages","donate","donate_panel","en","title"] },
+    "copy.donate.donate_panel.subtitle_en": { "source": "COPY_OUTPUT.json", "path": ["pages","donate","donate_panel","en","subtitle"] },
+    "copy.donate.donate_panel.body_en":     { "source": "COPY_OUTPUT.json", "path": ["pages","donate","donate_panel","en","body"] },
+    "copy.donate.donate_panel.cta_en":      { "source": "COPY_OUTPUT.json", "path": ["pages","donate","donate_panel","en","cta"] },
+    "copy.donate.donate_trust.title_en":    { "source": "COPY_OUTPUT.json", "path": ["pages","donate","donate_trust","en","title"] },
+    "copy.donate.donate_trust.body_en":     { "source": "COPY_OUTPUT.json", "path": ["pages","donate","donate_trust","en","body"] },
+    "copy.social.social_links.title_en":    { "source": "COPY_OUTPUT.json", "path": ["pages","social","social_links","en","title"] },
+    "copy.social.social_links.subtitle_en": { "source": "COPY_OUTPUT.json", "path": ["pages","social","social_links","en","subtitle"] },
+    "copy.social.footer_strip.title_en":    { "source": "COPY_OUTPUT.json", "path": ["pages","social","footer_strip","en","title"] }
+  },
+  "meta": {
+    "generatedAt": "2026-02-24T23:49:00+02:00",
+    "inputs": ["BA_OUTPUT.json", "VISUAL_OUTPUT.json", "STRUCTURE_OUTPUT.json", "COPY_OUTPUT.json"]
+  }
+}

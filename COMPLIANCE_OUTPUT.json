@@ -1,0 +1,69 @@
+{
+  "version": "1.0",
+  "project": {
+    "id": "musicjam",
+    "name": "MusicJam"
+  },
+  "jurisdiction": ["EU", "EE"],
+  "notes": [
+    "Site audience includes minors (13–18). No personal data is collected directly — no registration or contact forms present.",
+    "PayPal donate button is an external redirect to PayPal's platform. PayPal acts as an independent data controller for donation transactions; their own privacy policy applies.",
+    "Social media links (Instagram, YouTube, Facebook) may result in third-party cookies if users navigate to those platforms.",
+    "Non-profit / Christian youth ministry — no e-commerce backend; merch is showcased but purchase flow is not handled on-site.",
+    "Three supported locales: EN, RU, ET. All user-facing compliance texts must be provided in all three languages."
+  ],
+  "requirements": {
+    "cookieBanner": {
+      "required": true,
+      "rationale": "EU/GDPR mandates informed consent before setting non-essential cookies. Even on a static site, third-party social media links and any potential analytics embed may set cookies.",
+      "text": {
+        "en": "We use cookies to improve your experience. By continuing to use this site you accept our use of cookies. For more details, see our Privacy Policy.",
+        "ru": "Мы используем файлы cookie для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с использованием cookies. Подробнее см. в нашей Политике конфиденциальности.",
+        "et": "Kasutame küpsiseid teie kasutuskogemuse parandamiseks. Saidi kasutamise jätkamisega nõustute küpsiste kasutamisega. Lisateave meie privaatsuspoliitikas."
+      },
+      "actions": {
+        "accept": {
+          "en": "Accept",
+          "ru": "Принять",
+          "et": "Nõustun"
+        },
+        "decline": {
+          "en": "Decline",
+          "ru": "Отклонить",
+          "et": "Keeldu"
+        }
+      }
+    },
+    "privacyPolicy": {
+      "required": true,
+      "rationale": "GDPR Article 13/14 requires a privacy notice whenever a website is accessible to EU residents, even if minimal personal data is processed.",
+      "suggestedRoute": "/privacy",
+      "keyPoints": [
+        "Data Controller: MusicJam (non-profit Christian youth ministry, Estonia). Contact: [insert email].",
+        "This is a static informational website. No personal data (name, email, etc.) is collected directly through any form or registration on this site.",
+        "Donations are processed exclusively by PayPal. When you click the donate button you are redirected to PayPal's platform. PayPal is an independent data controller; please review PayPal's Privacy Policy at paypal.com/privacy.",
+        "Social media links (Instagram @musicjam_, YouTube musicjamcamp, Facebook musicjamcamp) redirect to external platforms. Those platforms may set their own cookies and collect data according to their own privacy policies.",
+        "The site may use analytics (e.g., page-view statistics). If analytics are enabled, only aggregated, anonymised data is processed. No personally identifiable information is stored.",
+        "Audience includes minors (ages 13–18). No personal data is knowingly collected from minors without parental consent. If a parent or guardian believes their child's data has been inadvertently collected, please contact us immediately.",
+        "Your rights under GDPR: right to access, rectify, erase, restrict, or object to processing of your personal data. To exercise any right, contact the Data Controller at the address above.",
+        "You may also lodge a complaint with the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon, aki.ee) if you believe your data rights have been violated.",
+        "This Privacy Policy may be updated periodically. The date of the latest revision will be indicated at the top of the page."
+      ]
+    },
+    "termsOfService": {
+      "required": false,
+      "rationale": "No user accounts, subscriptions, or on-site purchases. Informational static site with external PayPal redirect. Terms of Service are not legally mandatory in this context, but a brief disclaimer on the site is recommended."
+    },
+    "paypal": {
+      "required": true,
+      "type": "third-party-financial",
+      "rationale": "The PayPal donate button constitutes a financial transaction trigger. PayPal is regulated as a payment institution (PSD2 in EU). MusicJam itself does not process payment card data or store financial information; all such data is handled by PayPal under their own compliance framework (PCI DSS, GDPR).",
+      "recommendedDisclosure": {
+        "en": "Donations are securely processed by PayPal. MusicJam does not store your payment details.",
+        "ru": "Пожертвования обрабатываются безопасно через PayPal. MusicJam не хранит ваши платёжные данные.",
+        "et": "Annetused töödeldakse turvaliselt PayPali kaudu. MusicJam ei salvesta teie makseandmeid."
+      }
+    },
+    "forms": []
+  }
+}

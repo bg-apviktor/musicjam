@@ -1,0 +1,80 @@
+{
+  "version": "1.1",
+  "project": {
+    "id": "musicjam",
+    "name": "MusicJam"
+  },
+  "business": {
+    "type": "non-profit",
+    "sector": "Christian youth ministry / music education",
+    "location": "Estonia (different cities annually)",
+    "mission": "A Christian music camp for teenagers that combines musical education with spiritual growth, held annually in different Estonian cities."
+  },
+  "audience": {
+    "primary": [
+      "Teenagers (13–18) interested in music and Christian community",
+      "Parents of teenage participants"
+    ],
+    "secondary": [
+      "Churches and donors considering supporting the camp",
+      "Young adults and music ministry workers in Estonian churches"
+    ]
+  },
+  "goals": [
+    "Inform visitors about the camp — its mission, activities, and annual location",
+    "Showcase merchandise (merch) available for purchase",
+    "Accept donations via PayPal",
+    "Direct visitors to social media channels (Instagram, YouTube, Facebook)",
+    "Build trust and credibility through the camp's history (since 2018, 5+ cities)"
+  ],
+  "cta_primary": "Поддержать лагерь / Support the camp",
+  "competitors": [],
+  "pages": [
+    {
+      "id": "home",
+      "route": "/",
+      "purpose": "Hero landing — introduce MusicJam, its Christian mission, key activities, and guide visitors to merch, donate, and social links"
+    },
+    {
+      "id": "about",
+      "route": "/#about",
+      "purpose": "What is MusicJam — music activities (vocal, instrumental, orchestra, choir, worship band), spiritual focus, small group atmosphere"
+    },
+    {
+      "id": "history",
+      "route": "/#history",
+      "purpose": "Timeline of annual camps by city (Tapa 2018–2019, Tapa 2020, Narva 2021, Kohila 2022, Haapsalu 2023)"
+    },
+    {
+      "id": "merch",
+      "route": "/#merch",
+      "purpose": "Showcase available merchandise"
+    },
+    {
+      "id": "donate",
+      "route": "/#donate",
+      "purpose": "Donation section with PayPal link and funding context"
+    },
+    {
+      "id": "social",
+      "route": "/#social",
+      "purpose": "Links to Instagram, YouTube, Facebook"
+    }
+  ],
+  "constraints": {
+    "tone": "warm, faith-centred, welcoming, energetic — speaks to teenagers and their parents equally",
+    "mustSupportLocales": ["en", "ru", "et"],
+    "brand": {
+      "existingName": "MusicJam",
+      "existingColors": "Deep crimson/raspberry (#B5174A approx), white, green accent",
+      "existingFonts": null,
+      "domain": null
+    },
+    "technical": [
+      "Single-page layout with anchor sections",
+      "PayPal donate button integration",
+      "Social media links: Instagram @musicjam_, YouTube musicjamcamp, Facebook musicjamcamp",
+      "assumed: no backend needed — static site"
+    ]
+  }
+}

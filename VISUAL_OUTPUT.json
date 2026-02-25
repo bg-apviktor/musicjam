@@ -1,0 +1,154 @@
+{
+  "version": "1.0",
+  "project": {
+    "id": "musicjam",
+    "name": "MusicJam"
+  },
+  "brand": {
+    "essence": "Where music meets faith — a joyful summer experience for young musicians growing together",
+    "tagline": "Play. Worship. Grow.",
+    "voice": {
+      "tone": "Warm, energetic, sincere — like a trusted youth leader who's genuinely excited",
+      "keywords": ["joyful", "inviting", "real", "musical", "faith-filled", "youthful"],
+      "do": [
+        "Speak directly and warmly — 'you' language",
+        "Mix enthusiasm with substance — energy backed by purpose",
+        "Use short, punchy sentences for teens; provide reassuring detail for parents",
+        "Let photos and color do the emotional heavy lifting",
+        "Celebrate community and togetherness"
+      ],
+      "dont": [
+        "Don't be preachy or overly formal",
+        "Don't use churchy jargon that alienates newcomers",
+        "Don't talk down to teenagers",
+        "Don't use generic stock-photo language — keep it specific to MusicJam",
+        "Don't overload with text — this is a visual, musical brand"
+      ]
+    }
+  },
+  "mood": {
+    "keywords": ["summer camp energy", "jam session warmth", "berry-stained hands", "sunlit worship", "acoustic intimacy", "festival spirit"],
+    "description": "Think warm summer evenings with guitars on a lawn, berry-coloured light filtering through trees. The palette is rooted in deep raspberry — rich and bold like jam itself — offset by clean whites and pops of leafy green. The overall feel is handmade yet polished: splatter textures, rounded shapes, and generous whitespace keep it youthful without being childish. Photography (when used) should show real teenagers making music together — candid, not posed."
+  },
+  "colors": {
+    "primary": "#B5174A",
+    "onPrimary": "#FFFFFF",
+    "accent": "#3EA66B",
+    "accentSoft": "#D6F0E2",
+    "background": "#FDF8F4",
+    "surface": "#FFFFFF",
+    "surfaceAlt": "#F9ECEF",
+    "borderSubtle": "#E8D5DA",
+    "text": "#2D1A22",
+    "textMuted": "#7A5C68",
+    "states": {
+      "success": "#3EA66B",
+      "warning": "#E8A830",
+      "danger": "#D42B2B"
+    },
+    "notes": "Primary raspberry (#B5174A) is the brand anchor — use for CTAs, headings, and key accents. Green (#3EA66B) as secondary accent for positive actions (donate, social links) and decorative leaf motifs. Warm cream background (#FDF8F4) avoids sterile white while keeping high contrast. surfaceAlt is a pink-tinted card background that echoes the jam/berry theme."
+  },
+  "typography": {
+    "primaryFont": "Nunito",
+    "secondaryFont": "Caveat",
+    "fallbacks": ["system-ui", "sans-serif"],
+    "notes": "Nunito: rounded, friendly sans-serif — great readability, supports Cyrillic and Latin. Caveat: handwritten feel for decorative headings and the 'jam' personality moments — mirrors the logo's playful lettering. Use Caveat sparingly: hero headline, section labels, pull quotes.",
+    "scale": {
+      "h1": { "size": 52, "lineHeight": 1.1, "weight": 800, "tracking": -0.02, "font": "Caveat" },
+      "h2": { "size": 36, "lineHeight": 1.15, "weight": 700, "tracking": -0.01, "font": "Nunito" },
+      "h3": { "size": 24, "lineHeight": 1.25, "weight": 700, "tracking": 0, "font": "Nunito" },
+      "body": { "size": 17, "lineHeight": 1.6, "weight": 400, "tracking": 0, "font": "Nunito" },
+      "caption": { "size": 13, "lineHeight": 1.4, "weight": 600, "tracking": 0.02, "font": "Nunito" }
+    }
+  },
+  "layout": {
+    "grid": "12-column",
+    "maxWidth": 1120,
+    "sectionSpacing": {
+      "vertical": 88,
+      "betweenBlocks": 36
+    },
+    "radius": {
+      "sm": 10,
+      "md": 18,
+      "lg": 28
+    },
+    "elevation": {
+      "card": "subtle",
+      "panel": "medium"
+    },
+    "notes": "Generous radii keep the rounded, jam-blob aesthetic. Slightly narrower max-width (1120) for intimate, readable single-page feel."
+  },
+  "components": [
+    {
+      "id": "hero_centered",
+      "name": "Hero — Centred Splash",
+      "description": "Full-width hero with logo centred on a warm background, tagline in Caveat, and a single CTA button. Optional background photo with overlay.",
+      "recommendedUsage": ["home"],
+      "layout": { "type": "centered_stack", "reverseOnMobile": false }
+    },
+    {
+      "id": "about_feature_grid",
+      "name": "About — Icon Feature Grid",
+      "description": "2×3 grid of activity cards (vocal, instrumental, orchestra, choir, worship band, small groups) each with an icon, short title, and one-liner. Cards use surfaceAlt background with rounded corners.",
+      "recommendedUsage": ["about"],
+      "layout": { "type": "grid_2x3", "reverseOnMobile": false }
+    },
+    {
+      "id": "history_timeline",
+      "name": "History — Vertical Timeline",
+      "description": "Vertical timeline with alternating left/right entries. Each node shows year, city name, and optional photo thumbnail. Timeline line in primary colour with berry-dot markers.",
+      "recommendedUsage": ["history"],
+      "layout": { "type": "timeline_vertical", "reverseOnMobile": false }
+    },
+    {
+      "id": "merch_carousel",
+      "name": "Merch — Product Cards",
+      "description": "Horizontal scrollable row of merch cards. Each card: product photo, name, price. Rounded card with subtle shadow on white surface.",
+      "recommendedUsage": ["merch"],
+      "layout": { "type": "horizontal_scroll", "reverseOnMobile": false }
+    },
+    {
+      "id": "donate_cta_panel",
+      "name": "Donate — CTA Panel",
+      "description": "Centred panel on surfaceAlt with a heartfelt one-paragraph message, amount context, and PayPal donate button in accent green. Rounded-lg corners.",
+      "recommendedUsage": ["donate"],
+      "layout": { "type": "centered_card", "reverseOnMobile": false }
+    },
+    {
+      "id": "social_icon_row",
+      "name": "Social — Icon Links",
+      "description": "Simple centred row of social media icons (Instagram, YouTube, Facebook) with hover animation. Sits above footer.",
+      "recommendedUsage": ["social"],
+      "layout": { "type": "centered_row", "reverseOnMobile": false }
+    },
+    {
+      "id": "language_switcher",
+      "name": "Language Switcher",
+      "description": "Minimal pill-style toggle in the top nav: ET | RU | EN. Understated so it doesn't clutter but easy to find.",
+      "recommendedUsage": ["nav"],
+      "layout": { "type": "inline", "reverseOnMobile": false }
+    }
+  ],
+  "references": {
+    "visualExamples": [
+      {
+        "label": "Young Life camp sites",
+        "notes": "Warm, photo-driven, centred layouts with bold colour and handwritten type accents"
+      },
+      {
+        "label": "Hillsong Youth / Elevation Youth",
+        "notes": "Bold typography, vibrant colour, energetic but still faith-rooted"
+      },
+      {
+        "label": "Summer camp single-pagers (e.g. Camp Wandawega)",
+        "notes": "Playful illustration style, generous whitespace, earthy palettes"
+      }
+    ]
+  },
+  "meta": {
+    "generatedByModel": "anthropic/claude-opus-4-6",
+    "generatedAt": "2026-02-24T22:51:00+02:00",
+    "inputs": ["BA_OUTPUT.json"]
+  }
+}

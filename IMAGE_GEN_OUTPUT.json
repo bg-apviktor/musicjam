@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "project": {
+    "id": "musicjam"
+  },
+  "assets": [
+    {
+      "id": "hero_background",
+      "filename": "2026-02-24-23-30-01-hero-background.png",
+      "status": "ok"
+    },
+    {
+      "id": "about_illustration",
+      "filename": "2026-02-24-23-30-02-about-illustration.png",
+      "status": "ok"
+    },
+    {
+      "id": "icon_vocal",
+      "filename": "2026-02-24-23-30-03-icon-vocal.png",
+      "status": "ok"
+    },
+    {
+      "id": "icon_instrumental",
+      "filename": "2026-02-24-23-30-04-icon-instrumental.png",
+      "status": "ok"
+    },
+    {
+      "id": "icon_worship_band",
+      "filename": "2026-02-24-23-30-07-icon-worship-band.png",
+      "status": "ok"
+    },
+    {
+      "id": "donate_illustration",
+      "filename": "2026-02-24-23-30-09-donate-illustration.png",
+      "status": "ok"
+    },
+    {
+      "id": "og_image",
+      "filename": "2026-02-24-23-30-10-og-image.png",
+      "status": "ok"
+    },
+    {
+      "id": "icon_orchestra",
+      "filename": "2026-02-24-23-30-05-icon-orchestra.png",
+      "status": "ok"
+    },
+    {
+      "id": "icon_choir",
+      "filename": "2026-02-24-23-30-06-icon-choir.png",
+      "status": "ok"
+    },
+    {
+      "id": "icon_small_groups",
+      "filename": "2026-02-24-23-30-08-icon-small-groups.png",
+      "status": "ok"
+    }
+  ]
+}

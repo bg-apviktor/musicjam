@@ -1,0 +1,585 @@
+{
+  "version": "1.1",
+  "project": {
+    "id": "musicjam",
+    "name": "MusicJam"
+  },
+  "locales": [
+    "en",
+    "ru",
+    "et"
+  ],
+  "pages": {
+    "home": {
+      "hero": {
+        "en": {
+          "title": "Welcome to MusicJam!",
+          "subtitle": "A summer camp where music and faith unite.",
+          "cta": "Support Us Now",
+          "body": "",
+          "items": []
+        },
+        "ru": {
+          "title": "Добро пожаловать в MusicJam!",
+          "subtitle": "Летний лагерь, где музыка и вера объединяются.",
+          "cta": "Поддержите Нас",
+          "body": "",
+          "items": []
+        },
+        "et": {
+          "title": "Tere tulemast MusicJam'i!",
+          "subtitle": "Suvelaager, kus muusika ja usk ühinevad.",
+          "cta": "Toeta Meid",
+          "body": "",
+          "items": []
+        }
+      },
+      "intro_tagline": {
+        "en": {
+          "title": "What is MusicJam?",
+          "subtitle": "A Christian music camp for teens in Estonia. Join us to play, worship, and grow together in a vibrant community.",
+          "cta": "Learn More",
+          "body": "",
+          "items": []
+        },
+        "ru": {
+          "title": "Что такое MusicJam?",
+          "subtitle": "Христианский музыкальный лагерь для подростков в Эстонии. Присоединяйтесь, чтобы играть, поклоняться и расти вместе в дружной общине.",
+          "cta": "Узнать Больше",
+          "body": "",
+          "items": []
+        },
+        "et": {
+          "title": "Mis on MusicJam?",
+          "subtitle": "Kristlik muusikalaager teismelistele Eestis. Liitu meiega, et mängida, kummardada ja koos elavas kogukonnas kasvada.",
+          "cta": "Uuri Lähemalt",
+          "body": "",
+          "items": []
+        }
+      },
+      "quick_stats": {
+        "en": {
+          "title": "Our Impact",
+          "subtitle": "",
+          "cta": "",
+          "body": "",
+          "items": [
+            {
+              "label": "Since",
+              "value": "2018"
+            },
+            {
+              "label": "Cities",
+              "value": "5+"
+            },
+            {
+              "label": "Languages",
+              "value": "3"
+            }
+          ]
+        },
+        "ru": {
+          "title": "Наш Вклад",
+          "subtitle": "",
+          "cta": "",
+          "body": "",
+          "items": [
+            {
+              "label": "С",
+              "value": "2018"
+            },
+            {
+              "label": "Городов",
+              "value": "5+"
+            },
+            {
+              "label": "Языков",
+              "value": "3"
+            }
+          ]
+        },
+        "et": {
+          "title": "Meie Mõju",
+          "subtitle": "",
+          "cta": "",
+          "body": "",
+          "items": [
+            {
+              "label": "Alates",
+              "value": "2018"
+            },
+            {
+              "label": "Linna",
+              "value": "5+"
+            },
+            {
+              "label": "Keeled",
+              "value": "3"
+            }
+          ]
+        }
+      }
+    },
+    "about": {
+      "about_intro": {
+        "en": {
+          "title": "About MusicJam",
+          "subtitle": "A faith-filled music experience.",
+          "cta": "Join Us",
+          "body": "MusicJam is a Christian summer camp for teenagers aged 13–18. We blend music training with spiritual growth, creating a space to connect with God and each other through songs and small group discussions.",
+          "items": []
+        },
+        "ru": {
+          "title": "О MusicJam",
+          "subtitle": "Музыкальный опыт, наполненный верой.",
+          "cta": "Присоединяйтесь",
+          "body": "MusicJam — это христианский летний лагерь для подростков 13–18 лет. Мы совмещаем музыкальное обучение с духовным ростом, создавая пространство для общения с Богом и друг с другом через песни и обсуждения в небольших группах.",
+          "items": []
+        },
+        "et": {
+          "title": "MusicJam'i Kohta",
+          "subtitle": "Usuga täidetud muusikaelamus.",
+          "cta": "Liitu Meiega",
+          "body": "MusicJam on kristlik suvelaager 13–18-aastastele teismelistele. Ühendame muusikaõpetuse vaimse kasvuga, luues ruumi Jumala ja üksteisega ühenduse loomiseks läbi laulude ja väikeste grupiarutelude.",
+          "items": []
+        }
+      },
+      "activities_grid": {
+        "en": {
+          "title": "Our Activities",
+          "subtitle": "Dive into music and community.",
+          "cta": "Explore More",
+          "body": "",
+          "items": [
+            {
+              "title": "Vocal",
+              "body": "Master your singing with expert coaching."
+            },
+            {
+              "title": "Instrumental",
+              "body": "Grow your skills on guitar, drums, and more."
+            },
+            {
+              "title": "Orchestra",
+              "body": "Play together in a full ensemble."
+            },
+            {
+              "title": "Choir",
+              "body": "Blend voices in powerful harmony."
+            },
+            {
+              "title": "Worship Band",
+              "body": "Lead heartfelt praise with a live band."
+            },
+            {
+              "title": "Small Groups",
+              "body": "Build friendships and share faith."
+            }
+          ]
+        },
+        "ru": {
+          "title": "Наши Занятия",
+          "subtitle": "Погрузись в музыку и общение.",
+          "cta": "Узнай Больше",
+          "body": "",
+          "items": [
+            {
+              "title": "Вокал",
+              "body": "Совершенствуй пение с опытными наставниками."
+            },
+            {
+              "title": "Инструменты",
+              "body": "Развивай навыки игры на гитаре, барабанах и не только."
+            },
+            {
+              "title": "Оркестр",
+              "body": "Играй вместе в большом ансамбле."
+            },
+            {
+              "title": "Хор",
+              "body": "Сливай голоса в мощной гармонии."
+            },
+            {
+              "title": "Группа Прославления",
+              "body": "Веди искреннее поклонение с живой группой."
+            },
+            {
+              "title": "Малые Группы",
+              "body": "Строй дружбу и делись верой."
+            }
+          ]
+        },
+        "et": {
+          "title": "Meie Tegevused",
+          "subtitle": "Sukeldu muusikasse ja kogukonda.",
+          "cta": "Avasta Rohkem",
+          "body": "",
+          "items": [
+            {
+              "title": "Vokaal",
+              "body": "Õpi laulmist koos kogenud juhendajatega."
+            },
+            {
+              "title": "Instrumendid",
+              "body": "Arenda oskusi kitarril, trummidel ja mujal."
+            },
+            {
+              "title": "Orkester",
+              "body": "Mängi koos täielikus ansamblis."
+            },
+            {
+              "title": "Koor",
+              "body": "Ühenda hääled võimsas harmoonias."
+            },
+            {
+              "title": "Kiitusbänd",
+              "body": "Juhenda südamlikku kiitust live-bändiga."
+            },
+            {
+              "title": "Väiksed Grupid",
+              "body": "Loo sõprussuhteid ja jaga usku."
+            }
+          ]
+        }
+      }
+    },
+    "history": {
+      "history_heading": {
+        "en": {
+          "title": "Our History",
+          "subtitle": "Celebrating years of music and faith across Estonia.",
+          "cta": "See Timeline",
+          "body": "",
+          "items": []
+        },
+        "ru": {
+          "title": "Наша История",
+          "subtitle": "Отмечаем годы музыки и веры по всей Эстонии.",
+          "cta": "Смотреть Хронологию",
+          "body": "",
+          "items": []
+        },
+        "et": {
+          "title": "Meie Ajalugu",
+          "subtitle": "Tähistame muusika ja usu aastaid üle Eesti.",
+          "cta": "Vaade Ajajoonele",
+          "body": "",
+          "items": []
+        }
+      },
+      "camp_timeline": {
+        "en": {
+          "title": "MusicJam Through the Years",
+          "subtitle": "",
+          "cta": "",
+          "body": "",
+          "items": [
+            {
+              "title": "Tapa 2018",
+              "body": "Our first camp kicked off with passion."
+            },
+            {
+              "title": "Tapa 2019",
+              "body": "Returning with more teens and energy."
+            },
+            {
+              "title": "Tapa 2020",
+              "body": "Adapting and praising despite challenges."
+            },
+            {
+              "title": "Narva 2021",
+              "body": "Expanding east with new faces."
+            },
+            {
+              "title": "Kohila 2022",
+              "body": "Growing stronger in a new town."
+            },
+            {
+              "title": "Haapsalu 2023",
+              "body": "A coastal celebration of faith and song."
+            },
+            {
+              "title": "Tartu 2024",
+              "body": "New horizons in Estonia's intellectual capital."
+            },
+            {
+              "title": "Vasalemma 2025",
+              "body": "A new chapter of worship and music."
+            }
+          ]
+        },
+        "ru": {
+          "title": "MusicJam Через Годы",
+          "subtitle": "",
+          "cta": "",
+          "body": "",
+          "items": [
+            {
+              "title": "Тапа 2018",
+              "body": "Наш первый лагерь стартовал с энтузиазмом."
+            },
+            {
+              "title": "Тапа 2019",
+              "body": "Вернулись с большим числом подростков и энергии."
+            },
+            {
+              "title": "Тапа 2020",
+              "body": "Адаптировались и славили несмотря на трудности."
+            },
+            {
+              "title": "Нарва 2021",
+              "body": "Расширились на восток с новыми участниками."
+            },
+            {
+              "title": "Кохила 2022",
+              "body": "Стали сильнее в новом городе."
+            },
+            {
+              "title": "Хаапсалу 2023",
+              "body": "Празднование веры и песни на побережье."
+            },
+            {
+              "title": "Тарту 2024",
+              "body": "Новые горизонты в интеллектуальной столице Эстонии."
+            },
+            {
+              "title": "Васалемма 2025",
+              "body": "Новая глава поклонения и музыки."
+            }
+          ]
+        },
+        "et": {
+          "title": "MusicJam Läbi Aastate",
+          "subtitle": "",
+          "cta": "",
+          "body": "",
+          "items": [
+            {
+              "title": "Tapa 2018",
+              "body": "Meie esimene laager algas kirega."
+            },
+            {
+              "title": "Tapa 2019",
+              "body": "Tagasi rohkemate teismeliste ja energiaga."
+            },
+            {
+              "title": "Tapa 2020",
+              "body": "Kohanesime ja kiitsime hoolimata väljakutsetest."
+            },
+            {
+              "title": "Narva 2021",
+              "body": "Laienesime ida poole uute nägudega."
+            },
+            {
+              "title": "Kohila 2022",
+              "body": "Kasvasime tugevamaks uues linnas."
+            },
+            {
+              "title": "Haapsalu 2023",
+              "body": "Rannikuline usu ja laulu tähistamine."
+            },
+            {
+              "title": "Tartu 2024",
+              "body": "Uued horisondid Eesti intellektuaalses pealinnas."
+            },
+            {
+              "title": "Vasalemma 2025",
+              "body": "Uus peatükk kummardamises ja muusikas."
+            }
+          ]
+        }
+      }
+    },
+    "merch": {
+      "merch_heading": {
+        "en": {
+          "title": "MusicJam Merch",
+          "subtitle": "Grab gear to support the camp!",
+          "cta": "Shop Now",
+          "body": "",
+          "items": []
+        },
+        "ru": {
+          "title": "Товары MusicJam",
+          "subtitle": "Возьмите вещи, чтобы поддержать лагерь!",
+          "cta": "Купить Сейчас",
+          "body": "",
+          "items": []
+        },
+        "et": {
+          "title": "MusicJam'i Kraam",
+          "subtitle": "Haara varustus laagri toetuseks!",
+          "cta": "Osta Nüüd",
+          "body": "",
+          "items": []
+        }
+      },
+      "merch_products": {
+        "en": {
+          "title": "Our Collection",
+          "subtitle": "",
+          "cta": "",
+          "body": "",
+          "items": []
+        },
+        "ru": {
+          "title": "Наша Коллекция",
+          "subtitle": "",
+          "cta": "",
+          "body": "",
+          "items": []
+        },
+        "et": {
+          "title": "Meie Kollektsioon",
+          "subtitle": "",
+          "cta": "",
+          "body": "",
+          "items": []
+        }
+      }
+    },
+    "donate": {
+      "donate_panel": {
+        "en": {
+          "title": "Support MusicJam",
+          "subtitle": "Help teens experience music and faith.",
+          "cta": "Donate Today",
+          "body": "Your gift helps us provide scholarships, instruments, and venues for young musicians. Every amount brings us closer to welcoming more teens into this life-changing camp.",
+          "items": []
+        },
+        "ru": {
+          "title": "Поддержите MusicJam",
+          "subtitle": "Помогите подросткам пережить музыку и веру.",
+          "cta": "Пожертвовать Сегодня",
+          "body": "Ваш вклад помогает нам предоставлять стипендии, инструменты и площадки для молодых музыкантов. Любая сумма приближает нас к тому, чтобы принять больше подростков в этот лагерь, меняющий жизнь.",
+          "items": []
+        },
+        "et": {
+          "title": "Toeta MusicJam'i",
+          "subtitle": "Aita teismelistel kogeda muusikat ja usku.",
+          "cta": "Anneta Täna",
+          "body": "Sinu kingitus aitab meil pakkuda stipendiume, instrumente ja kohti noortele muusikutele. Iga summa viib meid lähemale sellele, et võtta vastu rohkem teismelisi sellesse elumuutvasse laagrisse.",
+          "items": []
+        }
+      },
+      "donate_trust": {
+        "en": {
+          "title": "How We Use Funds",
+          "subtitle": "",
+          "cta": "",
+          "body": "MusicJam is a non-profit ministry. Donations directly support camp costs, scholarships, and equipment for teens.",
+          "items": []
+        },
+        "ru": {
+          "title": "Как Мы Используем Средства",
+          "subtitle": "",
+          "cta": "",
+          "body": "MusicJam — это некоммерческое служение. Пожертвования напрямую поддерживают расходы на лагерь, стипендии и оборудование для подростков.",
+          "items": []
+        },
+        "et": {
+          "title": "Kuidas Me Vahendeid Kasutame",
+          "subtitle": "",
+          "cta": "",
+          "body": "MusicJam on mittetulunduslik teenistus. Annetused toetavad otseselt laagrikulusid, stipendiume ja varustust teismelistele.",
+          "items": []
+        }
+      }
+    },
+    "social": {
+      "social_links": {
+        "en": {
+          "title": "Connect With Us",
+          "subtitle": "Follow MusicJam on social media.",
+          "cta": "Follow Now",
+          "body": "",
+          "items": []
+        },
+        "ru": {
+          "title": "Свяжитесь с Нами",
+          "subtitle": "Следите за MusicJam в соцсетях.",
+          "cta": "Подписаться",
+          "body": "",
+          "items": []
+        },
+        "et": {
+          "title": "Ühendu Meiega",
+          "subtitle": "Jälgi MusicJam'i sotsiaalmeedias.",
+          "cta": "Jälgi Nüüd",
+          "body": "",
+          "items": []
+        }
+      },
+      "footer_strip": {
+        "en": {
+          "title": "MusicJam © 2018–2026",
+          "subtitle": "",
+          "cta": "",
+          "body": "",
+          "items": []
+        },
+        "ru": {
+          "title": "MusicJam © 2018–2026",
+          "subtitle": "",
+          "cta": "",
+          "body": "",
+          "items": []
+        },
+        "et": {
+          "title": "MusicJam © 2018–2026",
+          "subtitle": "",
+          "cta": "",
+          "body": "",
+          "items": []
+        }
+      }
+    }
+  },
+  "global": {
+    "nav": {
+      "en": {
+        "home": "Home",
+        "about": "About",
+        "history": "History",
+        "merch": "Merch",
+        "donate": "Donate",
+        "social": "Social"
+      },
+      "ru": {
+        "home": "Главная",
+        "about": "О Нас",
+        "history": "История",
+        "merch": "Товары",
+        "donate": "Пожертвовать",
+        "social": "Соцсети"
+      },
+      "et": {
+        "home": "Kodu",
+        "about": "Meist",
+        "history": "Ajalugu",
+        "merch": "Kraam",
+        "donate": "Anneta",
+        "social": "Sotsiaalmeedia"
+      }
+    },
+    "footer": {
+      "en": {
+        "tagline": "Play. Worship. Grow.",
+        "rights": "© MusicJam 2018–2026"
+      },
+      "ru": {
+        "tagline": "Играй. Поклоняйся. Расти.",
+        "rights": "© MusicJam 2018–2026"
+      },
+      "et": {
+        "tagline": "Mängi. Kummarda. Kasva.",
+        "rights": "© MusicJam 2018–2026"
+      }
+    },
+    "cookie": {
+      "en": "We use cookies to improve your experience. By continuing to use this site you accept our use of cookies. For more details, see our Privacy Policy.",
+      "ru": "Мы используем файлы cookie для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с использованием cookies. Подробнее см. в нашей Политике конфиденциальности.",
+      "et": "Kasutame küpsiseid teie kasutuskogemuse parandamiseks. Saidi kasutamise jätkamisega nõustute küpsiste kasutamisega. Lisateave meie privaatsuspoliitikas."
+    }
+  }
+}

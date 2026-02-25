@@ -1,0 +1,254 @@
+{
+  "version": "1.0",
+  "project": {
+    "id": "musicjam",
+    "name": "MusicJam"
+  },
+  "overallStatus": "partial",
+  "checks": [
+    {
+      "category": "content",
+      "id": "content-sections-rendered",
+      "description": "All 13 expected sections rendered in page.tsx",
+      "status": "pass",
+      "notes": "All 13 sections are present: hero (inside Hero component), intro_tagline (IntroTagline), quick_stats (StatsStrip), about_intro (AboutIntro), activities_grid (ActivitiesGrid), history_heading + camp_timeline (both inside HistoryTimeline), merch_heading + merch_products (inside MerchSection), donate_panel + donate_trust (inside DonatePanel), social_links (SocialLinks), footer_strip (Footer). Sections are logically nested with correct anchor IDs."
+    },
+    {
+      "category": "content",
+      "id": "content-no-hardcoded-strings",
+      "description": "No hardcoded user-facing text strings — all copy via getCopy()/COPY_OUTPUT.json",
+      "status": "warning",
+      "notes": "Almost all copy is correctly loaded via getCopy(). Exception: MerchSection.tsx uses a hardcoded MERCH_ITEMS constant (4 items with name/price/emoji) instead of reading from COPY_OUTPUT.json merch_products section. Noted in DEV_REPORT as acceptable because COPY_OUTPUT.merch_products.items is empty ([]) for all locales — no real product data exists yet. Needs real product data in COPY_OUTPUT when merch goes live."
+    },
+    {
+      "category": "content",
+      "id": "content-cta-buttons",
+      "description": "CTA buttons present and labeled via copy",
+      "status": "pass",
+      "notes": "Primary CTAs confirmed: Hero uses copy.cta ('Support Us Now' / 'Поддержите Нас' / 'Toeta Meid'), AboutIntro uses copy.cta ('Join Us'), DonatePanel uses panel.cta ('Donate Today'). All CTAs are locale-aware via getCopy(). Donate button links to PayPal URL. Hero CTA links to #donate anchor."
+    },
+    {
+      "category": "content",
+      "id": "content-paypal-url-placeholder",
+      "description": "PayPal donate button URL is not a real hosted button ID",
+      "status": "fail",
+      "notes": "DonatePanel.tsx hardcodes PAYPAL_URL = 'https://www.paypal.com/donate/?hosted_button_id=MUSICJAM_DONATE'. The value 'MUSICJAM_DONATE' is clearly a placeholder — real PayPal hosted button IDs are alphanumeric strings like 'XYZ1234ABCDEF'. The donate button will redirect to PayPal but the donation form will fail or show an error. Must be replaced with the actual PayPal hosted_button_id before launch."
+    },
+    {
+      "category": "i18n",
+      "id": "i18n-locales-handled",
+      "description": "All 3 locales (en/ru/et) handled in routing and copy",
+      "status": "pass",
+      "notes": "src/i18n/routing.ts defines locales: ['en', 'ru', 'et'], defaultLocale: 'en'. middleware.ts applies next-intl routing to all paths. generateStaticParams() in [locale]/layout.tsx generates static pages for all 3 locales. copy.ts has a safeLocale() guard that falls back to 'en' for unknown locales. All COPY_OUTPUT.json sections have en/ru/et variants."
+    },
+    {
+      "category": "i18n",
+      "id": "i18n-language-switcher",
+      "description": "LanguageSwitcher component present and functional",
+      "status": "pass",
+      "notes": "LanguageSwitcher.tsx is present in src/components/ui/. It correctly parses the current pathname and swaps the locale segment. It is rendered in both NavBar (top-right, desktop+mobile) and Footer. Visual design: ET | RU | EN pill with active locale highlighted in primary color."
+    },
+    {
+      "category": "i18n",
+      "id": "i18n-next-intl-configured",
+      "description": "next-intl v4 routing configured and middleware applied",
+      "status": "pass",
+      "notes": "next-intl createMiddleware() wraps the routing config. LocaleLayout validates incoming locale and calls notFound() for invalid values. NextIntlClientProvider wraps children with locale+messages. getMessages() used server-side. All patterns match next-intl v4 docs."
+    },
+    {
+      "category": "i18n",
+      "id": "i18n-nav-home-missing",
+      "description": "NavBar nav items list includes all STRUCTURE_OUTPUT navigation items",
+      "status": "warning",
+      "notes": "STRUCTURE_OUTPUT.navigation.header lists: ['home', 'about', 'history', 'merch', 'donate', 'social']. NavBar.tsx navIds only includes: ['about', 'history', 'merch', 'donate', 'social'] — 'home' is omitted. The MusicJam logo serves as the home link (href=`/${locale}`), which is acceptable UX, but the 'home' label from global.nav copy (Home / Главная / Kodu) is never displayed. Minor deviation."
+    },
+    {
+      "category": "compliance",
+      "id": "compliance-cookie-banner-present",
+      "description": "CookieBanner component present and injected into layout",
+      "status": "pass",
+      "notes": "CookieBanner.tsx exists in src/components/ui/. It is imported and rendered in [locale]/layout.tsx inside NextIntlClientProvider, after {children}. Rendered as a fixed bottom overlay (z-50). It is a 'use client' component with localStorage persistence using key 'musicjam_cookie_consent'."
+    },
+    {
+      "category": "compliance",
+      "id": "compliance-cookie-accept-decline",
+      "description": "Cookie banner has both accept and decline actions in all 3 locales",
+      "status": "pass",
+      "notes": "CookieBanner.tsx calls getCookieText(locale) for banner text and getCookieActions(locale) for button labels. copy.ts hardcodes actions: { en: {accept:'Accept', decline:'Decline'}, ru: {accept:'Принять', decline:'Отклонить'}, et: {accept:'Nõustun', decline:'Keeldu'} } — matches COMPLIANCE_OUTPUT exactly. Both buttons call localStorage.setItem and setVisible(false). GDPR-compliant: no tracking until 'accepted' is stored."
+    },
+    {
+      "category": "compliance",
+      "id": "compliance-privacy-policy-page",
+      "description": "Privacy policy page or section exists (GDPR Article 13/14 required)",
+      "status": "fail",
+      "notes": "COMPLIANCE_OUTPUT.requirements.privacyPolicy marks this as required with suggestedRoute '/privacy'. No such page was found in src/app/[locale]/privacy/ or src/app/privacy/. No privacy policy section exists in any page component. Cookie banner text references 'our Privacy Policy' but there is no link to any privacy policy document. This is a GDPR compliance blocker — EU/Estonian law requires a privacy notice for any site accessible to EU residents, even without personal data collection forms. Required action: create src/app/[locale]/privacy/page.tsx with the key points from COMPLIANCE_OUTPUT.requirements.privacyPolicy.keyPoints."
+    },
+    {
+      "category": "compliance",
+      "id": "compliance-paypal-disclosure",
+      "description": "PayPal disclosure text present in DonatePanel",
+      "status": "pass",
+      "notes": "DonatePanel.tsx calls getPaypalDisclosure(locale) from copy.ts. copy.ts hardcodes the disclosure in all 3 locales matching COMPLIANCE_OUTPUT.requirements.paypal.recommendedDisclosure exactly. Displayed as small print (13px, muted) below the donate button. Text: 'Donations are securely processed by PayPal. MusicJam does not store your payment details.' (EN)."
+    },
+    {
+      "category": "compliance",
+      "id": "compliance-privacy-policy-link-in-cookie-banner",
+      "description": "Cookie banner links to privacy policy",
+      "status": "warning",
+      "notes": "Cookie banner text mentions 'see our Privacy Policy' (EN) / 'Политике конфиденциальности' (RU) / 'privaatsuspoliitikas' (ET) but does not contain a hyperlink to a /privacy page. Once the privacy policy page is created, the cookie banner text should be updated to include a clickable link."
+    },
+    {
+      "category": "seo",
+      "id": "seo-jsonld-present",
+      "description": "JSON-LD structured data injected into page",
+      "status": "pass",
+      "notes": "Two JSON-LD scripts injected via dangerouslySetInnerHTML in [locale]/layout.tsx <head>: organizationSchema() (Organization type) and websiteSchema(locale) (WebSite type, locale-aware URL and inLanguage). lib/jsonld.ts also defines eventSchema() with correct Event schema for the camp, but it is NOT used anywhere — see seo-event-schema-unused warning."
+    },
+    {
+      "category": "seo",
+      "id": "seo-title-meta-description",
+      "description": "title and meta description set per locale",
+      "status": "pass",
+      "notes": "generateMetadata() in [locale]/layout.tsx returns locale-specific title and description for all 3 locales (en/ru/et). Title format: 'MusicJam — [language-specific tagline]'. Descriptions include the tagline 'Play. Worship. Grow.' in each language. openGraph title and description also set. alternates.canonical and hreflang links for all 3 locales are configured."
+    },
+    {
+      "category": "seo",
+      "id": "seo-og-image",
+      "description": "Open Graph image (og:image) referenced in metadata",
+      "status": "fail",
+      "notes": "generateMetadata() in [locale]/layout.tsx sets openGraph.title and openGraph.description but does NOT include openGraph.images. Without an og:image, social media sharing previews (Facebook, Telegram, Twitter/X, WhatsApp) will show no image. Required action: add a static OG image (recommended 1200×630px) at /public/og-image.jpg and reference it via openGraph: { images: ['https://musicjam.ee/og-image.jpg'] } in generateMetadata()."
+    },
+    {
+      "category": "seo",
+      "id": "seo-event-schema-unused",
+      "description": "eventSchema() defined in lib/jsonld.ts but never injected",
+      "status": "warning",
+      "notes": "lib/jsonld.ts exports eventSchema() with a valid schema.org Event type for 'MusicJam Summer Camp'. This schema is never imported or used in any layout or page. Including it would improve SEO for the annual camp event. Suggested fix: import and inject eventSchema() alongside orgSchema and webSchema in [locale]/layout.tsx."
+    },
+    {
+      "category": "seo",
+      "id": "seo-nonprofit-schema-property",
+      "description": "organizationSchema() uses non-standard 'nonprofit: true' property",
+      "status": "warning",
+      "notes": "lib/jsonld.ts organizationSchema() includes 'nonprofit: true' which is not a valid schema.org property for Organization type. Validators (Google Rich Results, schema.org validator) will flag this as an unknown property. Suggested fix: either use @type: 'NGO' (a sub-type of Organization) or remove the invalid property. The Organization type itself is still valid and will not break structured data parsing."
+    },
+    {
+      "category": "accessibility",
+      "id": "a11y-images-alt-text",
+      "description": "Images have alt text",
+      "status": "pass",
+      "notes": "No <img> or next/image <Image> elements are used anywhere in the codebase. All visual elements use CSS backgrounds, emoji characters (in div containers), or Tailwind utility classes. No alt text issues to report. When real product photos or hero images are added later, alt text requirements will apply."
+    },
+    {
+      "category": "accessibility",
+      "id": "a11y-button-labels",
+      "description": "Interactive buttons and controls have accessible labels",
+      "status": "pass",
+      "notes": "NavBar hamburger button has aria-label='Toggle menu'. All other buttons/anchors have visible text content. Social links in SocialLinks.tsx contain both platform name and handle as text children. Donate button contains text from copy.cta. Language switcher links have visible locale code text (ET/RU/EN). No icon-only buttons without labels."
+    },
+    {
+      "category": "accessibility",
+      "id": "a11y-color-tokens-defined",
+      "description": "Brand color tokens defined in CSS with contrast guidance",
+      "status": "pass",
+      "notes": "globals.css defines a complete @theme inline color palette: primary #B5174A, on-primary #FFFFFF, accent #3EA66B, brand-text #2D1A22, muted #7A5C68, surface #FFFFFF, surface-alt #F9ECEF. Primary (#B5174A) on white: ~5.3:1 (passes WCAG AA). White on primary: ~5.3:1 (passes). Muted (#7A5C68) on white: ~4.1:1 (passes AA for large text, marginal for small). Shadows and radii tokens also defined."
+    },
+    {
+      "category": "accessibility",
+      "id": "a11y-accent-color-contrast",
+      "description": "Accent color (#3EA66B) on white text meets WCAG AA contrast ratio",
+      "status": "warning",
+      "notes": "PayPal donate button in DonatePanel uses bg-accent (#3EA66B) with text-white. Computed contrast ratio: 3.06:1. WCAG 2.1 AA requires 4.5:1 for normal text and 3:1 for large text (18pt/24px normal or 14pt/18.67px bold). The button uses text-base (~16px) font-bold (~12pt bold) which does NOT qualify as 'large text' under WCAG. Therefore 3.06:1 FAILS WCAG AA for this usage. Suggested fix: darken accent to ~#2E7A50 or use primary (#B5174A) for the donate button instead."
+    },
+    {
+      "category": "performance",
+      "id": "perf-no-console-log",
+      "description": "No console.log statements left in production source code",
+      "status": "pass",
+      "notes": "grep -rn 'console.log' across all src/ files returned no matches. Code is clean of debug logging."
+    },
+    {
+      "category": "performance",
+      "id": "perf-middleware-deprecation",
+      "description": "middleware.ts file convention deprecated in Next.js 16",
+      "status": "warning",
+      "notes": "src/middleware.ts uses the old file name convention. Next.js 16 docs state that the middleware file should be renamed to src/proxy.ts (or proxy.js). The current file works and produces a build warning but is not an error. Required action before next major Next.js upgrade: rename src/middleware.ts to src/proxy.ts and update any references. The file content (next-intl createMiddleware wrapper) itself is correct and does not need changes."
+    },
+    {
+      "category": "layout",
+      "id": "layout-root-no-html-body",
+      "description": "Root layout.tsx does not include <html> or <body> tags",
+      "status": "pass",
+      "notes": "src/app/layout.tsx returns only {children} without html/body wrapper. This is the recommended next-intl pattern for App Router — the locale-specific [locale]/layout.tsx provides the <html lang={locale}> and <body> tags, enabling per-locale lang attribute. Build succeeded with 0 errors, confirming Next.js 16 accepts this pattern."
+    },
+    {
+      "category": "layout",
+      "id": "layout-fonts-loaded",
+      "description": "Google Fonts (Nunito + Caveat) loaded via next/font with CSS variables",
+      "status": "pass",
+      "notes": "[locale]/layout.tsx loads Nunito (body font) and Caveat (display/tagline font) via next/font/google with subsets ['latin', 'cyrillic'] for RU support. Variables --font-nunito and --font-caveat are injected on <html> className and referenced in globals.css @theme as --font-sans and --font-display."
+    },
+    {
+      "category": "layout",
+      "id": "layout-section-ids",
+      "description": "All anchor target section IDs are present for NavBar links",
+      "status": "pass",
+      "notes": "NavBar links to #about, #history, #merch, #donate, #social. Corresponding section IDs: <section id='about'> wraps AboutIntro+ActivitiesGrid; <section id='history'> wraps HistoryTimeline; <section id='merch'> wraps MerchSection; <section id='donate'> wraps DonatePanel; <section id='social'> wraps SocialLinks+Footer. Hero has id='hero' inside Hero.tsx component. scroll-margin-top: 80px set in globals.css for sticky nav offset."
+    }
+  ],
+  "blockers": [
+    {
+      "id": "compliance-privacy-policy-page",
+      "description": "Missing /privacy page — GDPR Article 13/14 compliance blocker",
+      "action": "Create src/app/[locale]/privacy/page.tsx with a server component rendering the privacy policy in the current locale. Use key points from COMPLIANCE_OUTPUT.requirements.privacyPolicy.keyPoints. Update cookie banner text to include a hyperlink to /privacy."
+    },
+    {
+      "id": "content-paypal-url-placeholder",
+      "description": "PayPal donate button URL contains placeholder ID 'MUSICJAM_DONATE'",
+      "action": "Replace PAYPAL_URL constant in src/components/sections/DonatePanel.tsx with the real PayPal hosted button ID from the MusicJam PayPal account. Real IDs look like: https://www.paypal.com/donate/?hosted_button_id=ABCDE12345XYZ"
+    },
+    {
+      "id": "seo-og-image",
+      "description": "Missing og:image — social sharing previews will show no image",
+      "action": "Create a 1200×630px OG image (e.g. /public/og-image.jpg) and add openGraph.images to generateMetadata() in [locale]/layout.tsx."
+    }
+  ],
+  "warnings": [
+    {
+      "id": "content-no-hardcoded-strings",
+      "description": "MerchSection uses hardcoded MERCH_ITEMS instead of COPY_OUTPUT merch_products",
+      "action": "When real merch data is available, populate COPY_OUTPUT.json merch_products items and update MerchSection to use getCopy() for product data."
+    },
+    {
+      "id": "i18n-nav-home-missing",
+      "description": "NavBar omits 'home' from nav items list — home handled by logo only",
+      "action": "Optional: add home nav link to navIds if an explicit 'Home' text link is desired per STRUCTURE_OUTPUT spec."
+    },
+    {
+      "id": "seo-event-schema-unused",
+      "description": "eventSchema() defined in lib/jsonld.ts but never injected into page head",
+      "action": "Import eventSchema and inject as a third <script type='application/ld+json'> in [locale]/layout.tsx to improve Event SEO."
+    },
+    {
+      "id": "seo-nonprofit-schema-property",
+      "description": "organizationSchema() uses non-standard property 'nonprofit: true'",
+      "action": "Change @type to 'NGO' or remove the invalid 'nonprofit' property from organizationSchema() in lib/jsonld.ts."
+    },
+    {
+      "id": "a11y-accent-color-contrast",
+      "description": "Donate button: white text on #3EA66B is 3.06:1 — fails WCAG AA for normal text",
+      "action": "Darken the accent color to ~#2E7A50 (achieves 4.5:1+) or use primary (#B5174A) for the PayPal donate button background."
+    },
+    {
+      "id": "perf-middleware-deprecation",
+      "description": "src/middleware.ts deprecated in Next.js 16 — should be renamed to src/proxy.ts",
+      "action": "Rename src/middleware.ts to src/proxy.ts before the next major Next.js upgrade. The file content is correct; only the filename needs to change."
+    },
+    {
+      "id": "compliance-privacy-policy-link-in-cookie-banner",
+      "description": "Cookie banner references privacy policy in text but provides no clickable link",
+      "action": "After creating the /privacy page, update getCookieText() return values (or COPY_OUTPUT.json global.cookie) to wrap 'Privacy Policy' in a link tag."
+    }
+  ],
+  "summary": "MusicJam Next.js 16 site is mostly well-built with clean architecture. All 13 expected sections render correctly, next-intl i18n works across all 3 locales (en/ru/et), copy is loaded from COPY_OUTPUT.json throughout, and the cookie banner with accept/decline is functional. JSON-LD (Organization + WebSite schemas), locale-specific metadata, and font loading are all in place. Three blockers require resolution before launch: (1) a privacy policy page is entirely missing — a GDPR compliance requirement flagged in COMPLIANCE_OUTPUT; (2) the PayPal donate button uses a placeholder hosted_button_id ('MUSICJAM_DONATE') that will not process real donations; (3) no og:image is set, breaking social sharing previews. Additionally, the middleware.ts file needs renaming to proxy.ts per Next.js 16 convention, the accent color on the donate button (#3EA66B with white text at 3.06:1) falls short of WCAG AA contrast, and the eventSchema and nonprofit schema issues should be addressed for SEO hygiene."
+}

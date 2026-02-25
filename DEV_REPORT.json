@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "project": {
+    "id": "musicjam",
+    "name": "MusicJam"
+  },
+  "status": "built",
+  "pages": [
+    { "id": "home", "route": "/", "status": "done" }
+  ],
+  "components": [
+    "Hero",
+    "IntroTagline",
+    "StatsStrip",
+    "AboutIntro",
+    "ActivitiesGrid",
+    "HistoryTimeline",
+    "MerchSection",
+    "DonatePanel",
+    "SocialLinks",
+    "Footer",
+    "NavBar",
+    "LanguageSwitcher",
+    "CookieBanner"
+  ],
+  "features": {
+    "jsonLd": true,
+    "servicesJson": true,
+    "i18n": ["en", "ru", "et"],
+    "cookieBanner": true,
+    "paypalDonate": true,
+    "framerMotion": true
+  },
+  "stack": {
+    "framework": "Next.js 16.1.6 (App Router)",
+    "styling": "Tailwind CSS v4 (@theme inline)",
+    "animation": "Framer Motion",
+    "i18n": "next-intl v4.8.3",
+    "fonts": "Nunito + Caveat (next/font/google)"
+  },
+  "notes": [
+    "Build succeeded with `next build` — 0 errors",
+    "Tailwind v4 CSS-based config used (@theme inline in globals.css)",
+    "All copy loaded from COPY_OUTPUT.json via src/lib/copy.ts — no hardcoded strings",
+    "JSON-LD (Organization + WebSite schemas) injected in [locale]/layout.tsx",
+    "Cookie banner text from COMPLIANCE_OUTPUT.json, with accept/decline actions",
+    "PayPal disclosure text from COMPLIANCE_OUTPUT.json included in DonatePanel",
+    "Middleware warning: Next.js 16 deprecates middleware in favor of proxy — works but shows warning",
+    "Merch items use placeholder data (emoji + name/price) since COPY_OUTPUT has no product items",
+    "Static pages generated for all 3 locales"
+  ]
+}
