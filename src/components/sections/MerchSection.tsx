@@ -20,7 +20,7 @@ export default function MerchSection({ locale }: Props) {
 
   return (
     <section id="merch" className="py-20 md:py-24" style={{ background: "#FFFFFF" }}>
-      <div className="max-w-3xl mx-auto px-6">
+      <div className="mx-auto px-6 md:px-12" style={{ maxWidth: "72rem" }}>
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 40 }}

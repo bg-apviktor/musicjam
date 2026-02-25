@@ -73,14 +73,14 @@ export default function ActivitiesGrid({ locale }: Props) {
 
   return (
     <section className="py-20 md:py-24" style={{ background: "#FFFFFF" }}>
-      <div className="max-w-3xl mx-auto px-6 mb-8">
+      <div className="mx-auto px-6 md:px-12 mb-8" style={{ maxWidth: "72rem" }}>
         <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "#6B7280" }}>
           {copy.subtitle}
         </p>
         <h2 className="text-3xl md:text-4xl font-bold" style={{ color: "#1D1D1F" }}>{copy.title}</h2>
       </div>
 
-      <div ref={ref} className="max-w-3xl mx-auto px-6">
+      <div ref={ref} className="mx-auto px-6 md:px-12" style={{ maxWidth: "72rem" }}>
         {TRACKS.map((track, index) => {
           const item = findItem(track);
           return (

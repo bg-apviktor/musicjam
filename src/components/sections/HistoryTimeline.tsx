@@ -48,7 +48,7 @@ export default function HistoryTimeline({ locale }: Props) {
       className="py-20 md:py-24"
       style={{ background: "#FFFFFF" }}
     >
-      <div className="max-w-3xl mx-auto px-6">
+      <div className="mx-auto px-6 md:px-12" style={{ maxWidth: "72rem" }}>
         {/* Heading */}
         <div ref={headingRef} className="text-center mb-16">
           <motion.p
@@ -83,7 +83,8 @@ export default function HistoryTimeline({ locale }: Props) {
         <div className="mb-12" ref={ref}>
           <svg
             viewBox="0 0 520 320"
-            className="w-full max-w-2xl mx-auto"
+            className="w-full mx-auto"
+            style={{ maxWidth: "72rem" }}
             aria-hidden="true"
           >
             {/* Estonia outline */}

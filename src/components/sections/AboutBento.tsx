@@ -24,7 +24,7 @@ export default function AboutBento({ locale }: Props) {
 
   return (
     <section className="py-20 md:py-24" style={{ background: "#FFFFFF" }}>
-      <div className="max-w-3xl mx-auto px-6" ref={ref}>
+      <div className="mx-auto px-6 md:px-12" style={{ maxWidth: "72rem" }} ref={ref}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
           {/* Large tile — about text */}
           <motion.div

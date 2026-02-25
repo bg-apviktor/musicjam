@@ -13,7 +13,7 @@ export default function IntroTagline({ locale }: Props) {
 
   return (
     <section className="py-20 md:py-24" style={{ background: "#FFFFFF" }}>
-      <div className="max-w-3xl mx-auto px-6 text-center">
+      <div className="mx-auto px-6 md:px-12 text-center" style={{ maxWidth: "72rem" }}>
         <div ref={ref}>
           <motion.p
             className="text-sm font-semibold uppercase tracking-widest mb-4"

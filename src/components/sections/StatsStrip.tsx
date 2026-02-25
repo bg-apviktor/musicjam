@@ -43,7 +43,7 @@ export default function StatsStrip({ locale }: Props) {
 
   return (
     <section className="py-16" style={{ background: "#FFFFFF" }}>
-      <div className="mx-auto px-6 md:px-12" style={{ maxWidth: "56rem" }}>
+      <div className="mx-auto px-6 md:px-12" style={{ maxWidth: "72rem" }}>
         <div
           ref={ref}
           className="flex flex-col sm:flex-row items-center justify-center"

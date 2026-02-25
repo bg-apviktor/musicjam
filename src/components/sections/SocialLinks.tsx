@@ -19,7 +19,7 @@ export default function SocialLinks({ locale }: Props) {
 
   return (
     <section id="social" className="py-20 md:py-24" style={{ background: "#FFFFFF" }}>
-      <div className="max-w-3xl mx-auto px-6 text-center">
+      <div className="mx-auto px-6 md:px-12 text-center" style={{ maxWidth: "72rem" }}>
         <div ref={ref}>
           <motion.p
             className="text-xs font-semibold uppercase tracking-[0.15em] mb-3"
